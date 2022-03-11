@@ -1,0 +1,24 @@
+{
+  "name": "bot_justdev",
+  "version": "0.0.1",
+  "description": "bot justdev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jokay03J/justDev.git"
+  },
+  "keywords": [
+    "discord.js",
+    "discord",
+    "justdev"
+  ],
+  "author": "jokay03J,Mizari-W,WEYERL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jokay03J/justDev/issues"
+  },
+  "homepage": "https://github.com/Jokay03J/justDev#readme"
+}
