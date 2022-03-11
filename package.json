@@ -4,7 +4,7 @@
   "description": "bot justdev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/Jokay03J/justDev/issues"
   },
-  "homepage": "https://github.com/Jokay03J/justDev#readme"
+  "homepage": "https://github.com/Jokay03J/justDev#readme",
+  "dependencies": {
+    "@discordjs/rest": "^0.3.0",
+    "colors": "^1.4.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
