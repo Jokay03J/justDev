@@ -43,7 +43,7 @@ for (const file of eventFiles) {
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 //set commands in application with REST
 rest.put(Routes.applicationGuildCommands(process.env.APPLICATIONID, process.env.GUILDID), { body: commands })
-  .then(() => console.log('tout les commands ont bien été charger'.green))
+  .then(() => console.log('toute les commandes ont bien été charger'.green))
   .catch(console.error);
 
 // Login to Discord with your client's token
