@@ -1,21 +1,25 @@
-### justDev Bot
-JustDev Bot est un bot de modération leveling
+# justDev Bot
+JustDev Bot est un bot de modération et de niveaux
 
-### milestone
+## milestone:
 
 Modération:
 - [ ] warn
 - [ ] mute(timeout)
 - [ ] kick
 - [ ] ban
-- [ ] clear
+- [x] clear
 
 misc:
 - [ ] role-menu
 
-### contribuer
+## contribuer:
 
-démarrer le bot:
+### démarrer le bot
 ```bash
 npm run start
 ```
+### variable d'environment(.env)
+TOKEN:token du bot discord\
+APPLICATIONID:application id([ici](https://discord.com/developers/applications/${applicationId}/information) => "application id")\
+CLIENTID:client id du bot([ici](https://discord.com/developers/applications/${applicationId}/oauth2/general) => "client id")
