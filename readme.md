@@ -6,7 +6,7 @@ JustDev Bot est un bot de modération et de niveaux
 Modération:
 - [ ] warn
 - [ ] mute(timeout)
-- [ ] kick
+- [x] kick
 - [x] ban
 - [x] clear
 
