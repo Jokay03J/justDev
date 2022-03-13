@@ -11,7 +11,7 @@ module.exports = {
       //check if member has permissions
       if (!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return await interaction.reply({ content: ":x: vous n'avez pas la permission d'utiliser cette commande", ephemeral: true })
       //check if bot has MANAGE CHANNEL 
-      if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return await interaction.reply({ content: ":x: je n'ai pas la permissions de supprimer des messages!", ephemeral: true })
+      if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return await interaction.reply({ content: ":x: je n'ai pas la permissions de supprimer des messages!(||MANAGE_MESSAGES||)", ephemeral: true })
       //number of message to delete
       const messageNumber = interaction.options.getInteger("nombre")
       //check if messageNumber is highest 99

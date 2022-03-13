@@ -13,7 +13,7 @@ module.exports = {
       //check author permissions
       if (!interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) return await interaction.editReply({ content: ":x: vous n'avez pas la permissions d'éxecuter cette commande!", ephemeral: true })
       //check bot permissions
-      if (!interaction.guild.me.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) return await interaction.editReply({ content: ":x: je n'ai pas la permissions de bannir!", ephemeral: true })
+      if (!interaction.guild.me.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) return await interaction.editReply({ content: ":x: je n'ai pas la permissions de bannir!(||BAN_MEMBERS||)", ephemeral: true })
       //user option
       const idMember = interaction.options.getString("membre");
       //reason option

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, Permissions } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -11,6 +11,10 @@ module.exports = {
     //set interaction defer
     await interaction.deferReply()
     try {
+      //check if author has permissions
+      if (!interaction.members.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return await interaction.editReply({ content: ":x: vous n'avez pas la permissions d'utiliser cette commande!", ephemeral: true })
+      //check if bot has permissions
+      if (!interaction.guild.me.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return await interaction.editReply({ content: ":x: je n'ai pas la permissions de kick!(||KICK_MEMBERS||)", ephemeral: true })
       //member option
       const member = interaction.options.getString("membre");
       //reason option
