@@ -7,7 +7,7 @@ Modération:
 - [ ] warn
 - [ ] mute(timeout)
 - [ ] kick
-- [ ] ban
+- [x] ban
 - [x] clear
 
 misc:
