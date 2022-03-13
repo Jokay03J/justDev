@@ -4,14 +4,18 @@ JustDev Bot est un bot de modération et de niveaux
 ## milestone:
 
 Modération:
-- [ ] warn
-- [ ] mute(timeout)
+- [ ] warn(WIP)
+- [x] mute(timeout)
+- [x] unmute
+- [x] user-info
+- [x] serveur-info
 - [x] kick
 - [x] ban
 - [x] clear
 
 misc:
-- [ ] role-menu
+- [x] role-menu
+- [x] ticket
 
 ## contribuer:
 
