@@ -17,23 +17,26 @@ module.exports = {
       //user option
       const idMember = interaction.options.getString("membre");
       //reason option
-      const reason = interaction.options.getString("raison")
+      const reason = interaction.options.getString("raison");
+      //fetch member
+      const fetchMember = interaction.guild.members.cache.get(idMember) || await interaction.guild.members.fetch(idMember).catch((err) => {})
       //ban member
-      await interaction.guild.members.ban(idMember, { reason: reason || "aucune raison définie" })
+      const banInfo = await fetchMember.ban({ reason: reason || "aucune raison définie" })
       //send confirm message
       const embed = new MessageEmbed()
         .setTitle("<:moderatorcertified:875466217425604680> banissement")
         .setColor("#ed3916")
-        .setDescription(`banissement effectuer`)
+        .setDescription(`${banInfo.displayName} à bien été bannis`)
         .addField("**raison**", reason || "aucune raison définie")
-      await interaction.editReply({ embeds: [embed] })
+        .setTimestamp()
+      await interaction.editReply({ embeds: [embed], ephemeral: true })
     } catch (error) {
-      console.log(error);
       const embed = new MessageEmbed()
         .setTitle("<:support:875466211205480500> erreur")
         .setColor("#ed3916")
         .setDescription("id invalide!")
-      await interaction.editReply({ embeds: [embed] })
+        .setTimestamp()
+      await interaction.editReply({ embeds: [embed], ephemeral: true })
     }
   }
 }
