@@ -41,12 +41,7 @@ for (const file of eventFiles) {
 //define REST type with token
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 //set commands in application with REST
-if (process.env.MODE === "PROD") {
-  rest.put(
-    Routes.applicationCommands(process.env.APPLICATIONID), { body: commands })
-    .then(() => console.log("toute les commandes ont bien été charger!".green))
-    .catch(console.error)
-} else {
+if (process.env.MODE === "DEV") {
   rest.put(
     Routes.applicationGuildCommands(process.env.APPLICATIONID, process.env.GUILDID), { body: commands })
     .then(() => {
@@ -54,6 +49,11 @@ if (process.env.MODE === "PROD") {
       console.log('toute les commandes ont bien été charger!'.green);
     })
     .catch(console.error);
+} else {
+  rest.put(
+    Routes.applicationCommands(process.env.APPLICATIONID), { body: commands })
+    .then(() => console.log("toute les commandes ont bien été charger!".green))
+    .catch(console.error)
 }
 
 // Login to Discord with your client's token
