@@ -33,4 +33,4 @@ DEVROLE:id du role developpement(select-role)\
 COMMUROLE:id du role communauter(select-role)\
 GAMINGROLE:id du role gaming(select-role)\
 PARENTID:id de la catégorie pour la création de ticket\
-MODE:PROD | DEV(mode du bot)\
+MODE:PROD | DEV(mode du bot)
