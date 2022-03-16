@@ -32,5 +32,5 @@ RULEROLE:id du role à donner lors de la pressions du bouton "accepter les règl
 DEVROLE:id du role developpement(select-role)\
 COMMUROLE:id du role communauter(select-role)\
 GAMINGROLE:id du role gaming(select-role)\
-PARENTID:id de la catégorie pour la création de ticket_
+PARENTID:id de la catégorie pour la création de ticket\
 MODE:PROD | DEV(mode du bot)\
